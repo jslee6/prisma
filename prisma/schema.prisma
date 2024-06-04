@@ -19,3 +19,37 @@ model sw {
   swPrice String? @db.VarChar(100)
   swId    Int     @id
 }
+
+model User2 {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  firstName String
+  lastName  String
+  address   String
+  age       Int?
+  company   String?
+  test      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  category    Category
+  price       Float
+  stock       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum Category {
+  FASHION
+  BEAUTY
+  SPORTS
+  ELECTRONICS
+  HOME_INTERIOR
+  HOUSEHOLD_SUPPLIES
+  KITCHENWARE
+}

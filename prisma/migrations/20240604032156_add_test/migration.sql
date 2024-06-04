@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `user2` ADD COLUMN `test` VARCHAR(191) NULL;
