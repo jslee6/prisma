@@ -1,0 +1,18 @@
+/*
+  Warnings:
+
+  - You are about to drop the `user3` table. If the table is not empty, all the data it contains will be lost.
+
+*/
+-- DropTable
+DROP TABLE `user3`;
+
+-- CreateTable
+CREATE TABLE `usertest` (
+    `name` VARCHAR(100) NULL,
+    `age` INTEGER NULL,
+    `number` VARCHAR(100) NULL,
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
