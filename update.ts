@@ -3,7 +3,7 @@ const prisma = new PrismaClient()
 
 
 async function update() {
-    let result = await prisma.user.updateMany({
+    let result = await prisma.usertest.updateMany({
         //한개 업데이트할떄는 updateMany 아닌 update로 써도된다는데 안되네
         where:{
             name: '이진석',
