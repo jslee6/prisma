@@ -1,8 +1,13 @@
 GET http://localhost:3000/users
 
+
+
 ###
 
-GET http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+GET http://localhost:3000/users?limit=2&offset=1
+# GET http://localhost:3000/users/dd11dcef-546e-413c-a637-b29a202a0059
+// id로 찾기  & 은  and 
+// ? 는 쿼리스트링 시작
 
 ###
 
@@ -10,15 +15,15 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "email": "yjkim@example.com", 
-  "firstName": "유진",
+  "email": "yjkim2@example.com", 
+  "firstName": "유진4",
   "lastName": "김",
   "address": "충청북도 청주시 북문로 210번길 5"
 }
 
 ###
 
-PATCH http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+PATCH http://localhost:3000/users/e83545ec-365a-4407-b31b-473a29780212
 Content-Type: application/json
 
 {
@@ -27,4 +32,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+DELETE http://localhost:3000/users/e83545ec-365a-4407-b31b-473a29780212

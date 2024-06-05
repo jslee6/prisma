@@ -12,11 +12,7 @@ async function create() {
     console.log(result);
 }
 
-// const user = await prisma.usertest.create({
-//     data: {
-//       email: 'elsa@prisma.io',
-//       name: 'Elsa Prisma',
-//     },
-//   })  기본
+create();
 
-create()
+//.ts 파일을 mjs로 바꿈 ,   "type": "module", 을 패키지.json에 있을떄?
+

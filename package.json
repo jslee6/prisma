@@ -19,6 +19,9 @@
     "dev": "nodemon app.js",
     "start": "node app.js"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "name": "prisma",
   "version": "1.0.0",
   "main": "app.js",
