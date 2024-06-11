@@ -10,25 +10,28 @@ const app = express();
 app.use(express.json());
 
 app.get('/users', async (req, res) => {
-  const { offset = 0, limit =10, order = 'newest'}= req.query;
-  let orderBy;
-  switch (order){
-    case 'oldest':
-      orderBy = { createdAt: 'asc'};
-      break;
-      case 'newest':
-        default:
-          orderBy = {createdAt:'desc'};
-  }
+  // const { offset = 0, limit =10, order = 'newest'}= req.query;
+  // let orderBy;
+  // switch (order){
+  //   case 'oldest':
+  //     orderBy = { createdAt: 'asc'};
+  //     break;
+  //     case 'newest':
+  //       default:
+  //         orderBy = {createdAt:'desc'};
+  // }
 
   const users = await prisma.user.findMany({
-    orderBy,
-    skip: parseInt(offset),
-    take: parseInt(limit),
+    // orderBy,
+    // skip: parseInt(offset),
+    // take: parseInt(limit),
   });
   //유저 조회
   res.send(users);
 });
+
+
+
 
 app.get('/users/:id', async (req, res) => {
   const { id } = req.params;
@@ -68,5 +71,23 @@ app.delete('/users/:id', async (req, res) => {
   res.sendStatus(204);
 });
 
+app.get('/usertests', async (req, res) => {
+  const usertests = await prisma.usertest.findMany({
+  });
+  res.send(usertests);
+});
+
+app.post('/usertests', async (req, res) => {
+  const usertests = await prisma.usertest.create({
+    data: req.body,
+  })
+  // 리퀘스트 바디 내용으로 유저 생성
+  res.status(201).send(usertests);
+});
+
+
+
 app.listen(process.env.PORT || 3000, () => console.log('Server Started'));
+
+
 

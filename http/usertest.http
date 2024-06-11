@@ -1,1 +1,14 @@
-GET http://localhost:3000/usertest
+GET http://localhost:3000/usertests
+
+
+###
+// ###을 써야함 각 API 마다
+
+POST http://localhost:3000/usertests
+Content-Type: application/json
+
+{
+  "name": "tes222t",
+  "age": 123
+}
+

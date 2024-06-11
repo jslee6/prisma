@@ -23,11 +23,11 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/users/e83545ec-365a-4407-b31b-473a29780212
+PATCH  http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
 Content-Type: application/json
 
 {
-  "address": "서울특별시 강남구 무실로 234번길 45-6"
+  "address": "서울특별시 강남구 무실로222222222234DD번길 45-6"
 }
 
 ###
